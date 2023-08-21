@@ -75,55 +75,90 @@ const el = document.querySelector(
 
 Questo selezionerà un input con un div genitore con la classe user-panel ma non la classe main.
 
-Specifiche
-Specificazione
-Standard DOM
-# ref-for-dom-parentnode-queryselector①
-Compatibilità con i browser
-Segnala problemi con questi dati di compatibilità su GitHub
-desktop	mobile
-Chrome
-Edge
-Firefox
-Opera
-Safari
-Chrome Android
-Firefox per Android
-Opera Android
-Safari su iOS
-Samsung Internet
-WebView Android
-querySelector
 
-1
-Mostra la cronologia	
-12
-Mostra la cronologia	
-3.5
-Mostra la cronologia	
-10
-Mostra la cronologia	
-3.1
-Mostra la cronologia	
-18
-Mostra la cronologia	
-4
-Mostra la cronologia	
-10.1
-Mostra la cronologia	
-2
-Mostra la cronologia	
-1.0
-Mostra la cronologia	
-4.4
-Mostra la cronologia
-Legenda
-Suggerimento: puoi fare clic/toccare su una cella per ulteriori informazioni.
 
-Supporto completo
-Supporto completo
-Vedi anche
-Localizzazione degli elementi DOM utilizzando i selettori
-Element.querySelector()
-Document.querySelectorAll()
-Element.querySelectorAll()
+**Chiarirsi le idee con qualche esempio che permetta di seguire il filo**
+
+Certo, posso aiutarti con degli esempi pratici per chiarire il concetto di `querySelector()`. In sostanza, il metodo `querySelector()` viene utilizzato per selezionare e recuperare elementi HTML all'interno del tuo documento utilizzando selettori CSS. I selettori CSS sono delle stringhe che definiscono come selezionare elementi specifici in base a classi, ID, tipi di elementi, gerarchia e altre proprietà.
+
+Ecco alcuni esempi per mostrarti come `querySelector()` funziona:
+
+**Esempio 1: Selezionare un elemento per ID**
+Supponiamo di avere un elemento `<div>` con un ID specifico come questo:
+
+```html
+<div id="myDiv">Questo è un elemento con ID</div>
+```
+
+Se vogliamo selezionare questo elemento utilizzando il suo ID, possiamo farlo così:
+
+```javascript
+const element = document.querySelector("#myDiv");
+console.log(element.textContent);
+```
+
+**Esempio 2: Selezionare un elemento per classe**
+Supponiamo di avere un elemento `<p>` con una classe specifica:
+
+```html
+<p class="myParagraph">Questo è un paragrafo con classe</p>
+```
+
+Se vogliamo selezionare questo elemento utilizzando la sua classe, possiamo farlo in questo modo:
+
+```javascript
+const element = document.querySelector(".myParagraph");
+console.log(element.textContent);
+```
+
+**Esempio 3: Selezionare un elemento nidificato**
+Supponiamo di avere una struttura HTML con un elemento nidificato:
+
+```html
+<div class="container">
+  <p>Primo paragrafo</p>
+  <p>Secondo paragrafo</p>
+</div>
+```
+
+Se vogliamo selezionare il secondo paragrafo all'interno dell'elemento con la classe "container", possiamo farlo in questo modo:
+
+```javascript
+const element = document.querySelector(".container p:nth-child(2)");
+console.log(element.textContent);
+```
+
+**Esempio 4: Selezionare un elemento con attributi**
+Supponiamo di avere un elemento `<a>` con un attributo `href` specifico:
+
+```html
+<a href="https://www.example.com">Link al sito di esempio</a>
+```
+
+Se vogliamo selezionare questo elemento utilizzando l'attributo `href`, possiamo farlo così:
+
+```javascript
+const element = document.querySelector('a[href="https://www.example.com"]');
+console.log(element.textContent);
+```
+
+**Esempio 5: Selezionare un elemento all'interno di un altro elemento**
+Supponiamo di avere una struttura HTML con un elemento padre e un elemento figlio:
+
+```html
+<div class="parent">
+  <p>Elemento padre</p>
+  <div class="child">
+    <p>Elemento figlio</p>
+  </div>
+</div>
+```
+
+Se vogliamo selezionare l'elemento `<p>` all'interno dell'elemento con classe "child", possiamo farlo così:
+
+```javascript
+const element = document.querySelector(".child p");
+console.log(element.textContent);
+```
+
+In breve, `querySelector()` ti permette di selezionare un elemento all'interno del documento HTML utilizzando diversi criteri, tra cui ID, classi, attributi e gerarchia. Puoi personalizzare i tuoi selettori CSS in base alle tue esigenze per recuperare gli elementi che desideri manipolare con il tuo JavaScript.
