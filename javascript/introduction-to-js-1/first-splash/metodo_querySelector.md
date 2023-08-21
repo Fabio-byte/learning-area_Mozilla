@@ -81,6 +81,8 @@ Questo selezionerà un input con un div genitore con la classe user-panel ma non
 
 Certo, posso aiutarti con degli esempi pratici per chiarire il concetto di `querySelector()`. In sostanza, il metodo `querySelector()` viene utilizzato per selezionare e recuperare elementi HTML all'interno del tuo documento utilizzando selettori CSS. I selettori CSS sono delle stringhe che definiscono come selezionare elementi specifici in base a classi, ID, tipi di elementi, gerarchia e altre proprietà.
 
+Utilizzare quel che segue anche come esercizi. Utilizzare Console.log anche su Firefox.
+
 Ecco alcuni esempi per mostrarti come `querySelector()` funziona:
 
 **Esempio 1: Selezionare un elemento per ID**
